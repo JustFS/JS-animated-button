@@ -1,53 +1,40 @@
 body {
   background: #333;
+  color: #333;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
   overflow: hidden;
 }
-.button {
+button {
   position: relative;
   overflow: hidden;
-	background: #FDB99B;
+	background: #ff5242;
 	padding: 2rem 3rem;
-	border: none;
 	color:#333;
-	font-size: 2rem;
+  font-size: 2rem;
 	cursor: pointer;
-	outline: none;
   border-radius: 100px;
-  transition: 0.2s;
-  box-shadow: 
-    0 -1px 0 #fff, 
-    0 1px 0 #2e2e2e, 
-    0 2px 0 #2c2c2c, 
-    0 3px 0 #2a2a2a, 
-    0 4px 0 #282828, 
-    0 5px 0 #262626, 
-    0 6px 0 #242424, 
-    0 7px 0 #222
+  outline: none;
+  border: none;
 }
 span {
   position: relative;	
   pointer-events: none;
 }
-.button::before {
+button::before {
   --size: 0;
-  
   content: '';
 	position: absolute;
 	left: var(--x);
 	top: var(--y);
 	width: var(--size);
 	height: var(--size);
-	background: radial-gradient(circle closest-side, rgb(255, 224, 87), transparent);
+	background: radial-gradient(circle closest-side, rgb(255, 219, 59), transparent);
 	transform: translate(-50%, -50%);
   transition: all .2s ease;
 }
-.button:hover::before {
+button:hover::before {
   --size: 400px;
-}
-.button:active {
-  transform: scale(0.95);
 }
